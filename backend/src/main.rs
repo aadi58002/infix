@@ -1,12 +1,18 @@
-#[macro_use]
-extern crate rocket;
+pub mod db;
+
+use rocket::*;
 
 #[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+fn index() -> String {
+// fn index(db: &State<db::Database>) -> String {
+    // format!("Hello, world! {}", db.handle)
+    format!("Hello, world!")
 }
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
+    db::Database::new();
+    rocket::build()
+        //.manage(db::Database::new())
+        .mount("/", routes![index])
 }
