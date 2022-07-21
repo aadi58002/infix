@@ -1,18 +1,27 @@
-pub mod db;
-
 use rocket::*;
 
 #[get("/")]
 fn index() -> String {
-// fn index(db: &State<db::Database>) -> String {
-    // format!("Hello, world! {}", db.handle)
     format!("Hello, world!")
 }
 
 #[launch]
 fn rocket() -> _ {
-    db::Database::new();
     rocket::build()
-        //.manage(db::Database::new())
         .mount("/", routes![index])
+}
+
+#[cfg(test)]
+mod test {
+    use super::rocket;
+    use rocket::local::blocking::Client;
+    use rocket::http::Status;
+
+    #[test]
+    fn hello_world() {
+        let client = Client::tracked(rocket()).expect("valid rocket instance");
+        let mut response = client.get(url(super::hello)).dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        assert_eq!(response.into_string().unwrap(), "Hello, world!");
+    }
 }

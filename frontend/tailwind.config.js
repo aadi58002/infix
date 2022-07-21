@@ -1,17 +1,20 @@
-const config = {
-    content: ["./index.html","./src/**/*.{vue,js,ts,jsx,tsx}",],
-    theme: {
-        extend: {},
-    },
-
-    plugins: [
-        function({ addVariant }) {
-            addVariant('child', '& > *');
-            addVariant('child-hover', '& > *:hover');
-        }
-    ],
-    mode: 'jit',
-    darkMode: 'class',
-};
-
-module.exports = config;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+      function({ addVariant }) {
+          addVariant('child', '& > *');
+          addVariant('child-hover', '& > *:hover');
+      }
+  ],
+  mode: 'jit',
+  darkMode: 'class',
+}
