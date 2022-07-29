@@ -10,8 +10,13 @@
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.20.0",
-    "nuxt": "3.0.0-rc.6",
+    "nuxt": "^3.0.0-rc.6",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.1.6",
+    "@babel/eslint-parser": "^7.18.9"
+  },
+  "dependencies": {
+    "three": "^0.143.0",
+    "troisjs": "^0.3.4"
   }
 }
