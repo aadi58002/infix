@@ -11,6 +11,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+      require("daisyui"),
       function({ addVariant }) {
           addVariant('child', '& > *');
           addVariant('child-hover', '& > *:hover');
