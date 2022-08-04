@@ -1,10 +1,10 @@
 {
-  "root": true,
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "sourceType": "module"
-  },
-  "extends": [
-    "@nuxtjs/eslint-config-typescript"
-  ]
+    "extends": [
+        "@antfu"
+    ],
+    "rules": {
+        "@typescript-eslint/consistent-type-imports": "off",
+        "vue/no-deprecated-slot-attribute": "off",
+        "vue/no-reserved-component-names": "off"
+    }
 }
