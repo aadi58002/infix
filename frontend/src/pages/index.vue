@@ -1,3 +1,5 @@
 <template>
-  <Starter />
+  <p>
+    This is a dummy message
+  </p>
 </template>
