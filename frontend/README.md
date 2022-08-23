@@ -1,89 +1,80 @@
-# Nuxt 3 Starter
+<p align="center">
+<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
+</p>
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+<h2 align="center">
+<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
+</h2><br>
 
-## Preview
-![image](https://user-images.githubusercontent.com/38668796/179501879-b1efa419-8419-4c27-a79e-d185cb2884b7.png)
+<pre align="center">
+🧪 Working in Progress
+</pre>
 
+<p align="center">
+<br>
+<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
+<br><br>
+<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/productdevbook/nuxt3-app)
+## Features
 
-## Deploy your own
+- [💚 Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/productdevbook/nuxt3-app)
+- ⚡️ Vite - Instant HMR
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/productdevbook/nuxt3-app)
+- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
 
-This starter template also includes:
+- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
 
-- [Tailwind CSS v3](https://github.com/tailwindlabs/tailwindcss)
-- [Eslint](https://eslint.org)
-- [Headless UI](https://headlessui.dev/vue/menu) - unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
-- [Icones](https://github.com/antfu/icones) - beautiful hand-crafted SVG icons with [Unocss](https://github.com/unocss/unocss) used. 
+- 🔥 The `<script setup>` syntax
 
-First-party plugins needed for Tailwind UI:
+- 🍍 [State Management via Pinia](https://pinia.esm.dev), see [./composables/user.ts](./composables/user.ts)
 
-- [tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
-- [tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
-- [tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
-- [tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+- 📑 [Layout system](./layouts)
 
+- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
-Best Nuxt with Plugins:
-- [Pinia](https://github.com/posva/pinia)
+- 🏎 Zero-config cloud functions and deploy
 
-## Setup
+- 🦾 TypeScript, of course
 
-Make sure to install the dependencies
+## Plugins
+
+### Nuxt Modules
+
+- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
+- [ColorMode](https://github.com/nuxt-community/color-mode-module) - dark and Light mode with auto detection made easy with Nuxt.
+- [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine.
+- [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
+
+## IDE
+
+We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable Vetur if you have it).
+
+## Variations
+
+- [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
+- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
+- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
+- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
+
+## Try it now!
+
+### Online
+
+<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+
+### GitHub Template
+
+[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
+
+### Clone to local
+
+If you prefer to do it manually with the cleaner git history
 
 ```bash
-yarn install
+npx degit antfu/vitesse-nuxt3 my-nuxt3-app
+cd my-nuxt3-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
-
-## Development
-
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-```bash
-yarn start
-```
-
-## Dependencies Update
-
-If you want to update the libraries, I left a nice command for you. Select it with space and press enter.
-
-```bash
-yarn allupdate
-```
-Example
-```
-➜  nuxt3-app git:(master) yarn allupdate
-yarn run v1.22.11
-$ yarn upgrade-interactive --latest
-info Color legend : 
- "<red>"    : Major Update backward-incompatible updates 
- "<yellow>" : Minor Update backward-compatible features 
- "<green>"  : Patch Update backward-compatible bug fixes
-? Choose which packages to update. (Press <space> to select, <a> to toggle all, <i> to invert selection)
- devDependencies
-   name   range   from                       to                      url
-❯◯ nuxt3  latest  3.0.0-27237303.6acfdcd  ❯  3.0.0-27238235.a1bcc53  
-```
-
-## Stay in touch
-- Website - [https://productdevbook.com](https://productdevbook.com/)
-- Twitter - [@productdevbook](https://twitter.com/productdevbook)
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
